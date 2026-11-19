@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.env
+# Personal data (resume, browser logins, job database) lives outside the repo by default,
+# but ignore a local data dir too in case JOB_AGENT_HOME points here.
+data/

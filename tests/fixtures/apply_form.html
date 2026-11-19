@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Apply - Backend Engineer - Example Labs</title>
+<style>.hidden-input{position:absolute;opacity:0;width:1px;height:1px} .fake-radio input{display:none}</style>
+</head>
+<body>
+<nav><a href="/about">About us</a> <a href="/careers">Careers</a></nav>
+<h1>Backend Engineer</h1>
+<form id="app" onsubmit="event.preventDefault(); document.getElementById('done').textContent='Application submitted! Thank you.'; this.style.display='none';">
+  <label for="fn">First name</label> <input id="fn" name="first_name" required>
+  <label for="ln">Last name</label> <input id="ln" name="last_name" required>
+  <label>Email <input type="email" name="email" required></label>
+  <input type="tel" name="phone" placeholder="Phone number">
+  <label for="city">Current city</label>
+  <select id="city" name="city"><option value="">Select…</option><option value="blr">Bengaluru</option><option value="pun">Pune</option><option value="hyd">Hyderabad</option></select>
+  <fieldset><legend>Are you legally authorized to work in India?</legend>
+    <label class="fake-radio"><input type="radio" name="auth" value="yes"> Yes</label>
+    <label class="fake-radio"><input type="radio" name="auth" value="no"> No</label>
+  </fieldset>
+  <div><p>Notice period (days)</p><div><input name="q_123" type="number"></div></div>
+  <label for="resume">Resume/CV</label> <input id="resume" type="file" name="resume" class="hidden-input" accept=".pdf,.docx">
+  <button type="button" id="cl-btn" onclick="document.getElementById('cl').click()">Attach cover letter</button>
+  <input id="cl" type="file" style="display:none">
+  <label>Why do you want to join us? <textarea name="why"></textarea></label>
+  <label><input type="checkbox" name="consent" required> I agree to the privacy policy</label>
+  <button type="submit">Submit application</button>
+</form>
+<p id="done"></p>
+<iframe srcdoc="<label>Referral code <input name='ref_code'></label><button>Verify</button>"></iframe>
+</body>
+</html>
